@@ -97,3 +97,9 @@
     border-radius: 20%;
 
 }
+button:hover{
+    background-color:#bdbdbd;
+}
+button:active {
+    background-color: #d6d6d6;
+}
