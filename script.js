@@ -6,70 +6,6 @@
 
 
 
-
-// Setting Event Listeners to the buttons
-// We are setting our a to a string because strings can be added
-
-// Ex. If we add two Int. (1+1 = 2) but we want if one is clicked multiple times
-// we want it to add up in a variable (parseInt) so we can continue clicking numbers
-// Also for example if we're trying to do 23, using Ints wont work, so we use strings instead.
-
-let zerobutton = document.getElementById("zero").addEventListener("click", function(event){
-    let a = zero;
-});
-let onebutton = document.getElementById("one").addEventListener("click", function(event){
-    let a = one;
-});
-let twobutton = document.getElementById("two").addEventListener("click", function(event){
-    let a = two;
-});
-let threebutton = document.getElementById("three").addEventListener("click", function(event){
-    let a = three;
-});
-let fourbutton = document.getElementById("four").addEventListener("click", function(event){
-    let a = four;
-});
-let fivebutton = document.getElementById("five").addEventListener("click", function(event){
-    let a = five;
-});
-let sixbutton = document.getElementById("six").addEventListener("click", function(event){
-    let a = six;
-});
-let sevenbutton = document.getElementById("seven").addEventListener("click", function(event){
-    let a = seven;
-});
-let eightbutton = document.getElementById("eight").addEventListener("click", function(event){
-    let a = eight;
-});
-let ninebutton = document.getElementById("nine").addEventListener("click", function(event){
-    let a = nine;
-});
-
-// Setting Event Listenters for the operators/main componenets
-let equalbutton = document.getElementById("equal").addEventListener("click", function(event){
-    // Equal the result 
-});
-let multiplybutton = document.getElementById("multiply").addEventListener("click");
-let plusbutton = document.getElementById("plus").addEventListener("click", function(event){
-    container =+ parseInt(a);
-    a = 0;
-});
-let subtractbutton = document.getElementById("subtract").addEventListener("click");
-// If A/C is clicked, clear total, and also associate variables
-
-let clearbutton = document.getElementById("clear").addEventListener("click", function(event){
-    let total = 0;
-    let a = "0";
-    let b = "0";
-});
-
-//Setting Event Listenters for the complex components
-// This is gonna be the last part of the program
-let decimalbutton = document.getElementById("decimal").addEventListener("click");
-let percentage = document.getElementById("percentage").addEventListener("click");
-let plusnegativebutton = document.getElementById("negative").addEventListener("click");
-
-
 // Setting Variables that set our placeholder variable to the number (string)
 let zero = "0";
 let one = "1";
@@ -82,11 +18,96 @@ let seven = "7";
 let eight = "8";
 let nine = "9";
 
+
 // Our containers for a number
 let a = 0;
 let b = 0;
 let container = 0;
 let total = 0;
+
+// Setting Event Listeners to the buttons
+// We are setting our a to a string because strings can be added
+
+// Ex. If we add two Int. (1+1 = 2) but we want if one is clicked multiple times
+// we want it to add up in a variable (parseInt) so we can continue clicking numbers
+// Also for example if we're trying to do 23, using Ints wont work, so we use strings instead.
+
+let totalHTML = document.getElementById("total");
+totalHTML.innerHTML = "0"
+let zerobutton = document.getElementById("zero").
+addEventListener("click", function(event){
+    let a = zero;
+    totalHTML.innerHTML = '0';
+});
+let onebutton = document.getElementById("one").addEventListener("click", function(event){
+    let a = one;
+    totalHTML.innerHTML = "1"
+});
+let twobutton = document.getElementById("two").addEventListener("click", function(event){
+    let a = two;
+    totalHTML.innerHTML = "2"
+});
+let threebutton = document.getElementById("three").addEventListener("click", function(event){
+    let a = three;
+    totalHTML.innerHTML = "3"
+});
+let fourbutton = document.getElementById("four").addEventListener("click", function(event){
+    let a = four;
+    totalHTML.innerHTML = "4"
+});
+let fivebutton = document.getElementById("five").addEventListener("click", function(event){
+    let a = five;
+    totalHTML.innerHTML = "5"
+});
+let sixbutton = document.getElementById("six").addEventListener("click", function(event){
+    let a = six;
+    totalHTML.innerHTML = "6"
+});
+let sevenbutton = document.getElementById("seven").addEventListener("click", function(event){
+    let a = seven;
+    totalHTML.innerHTML = "7"
+});
+let eightbutton = document.getElementById("eight").addEventListener("click", function(event){
+    let a = eight;
+    totalHTML.innerHTML = "8"
+});
+let ninebutton = document.getElementById("nine").addEventListener("click", function(event){
+    let a = nine;
+    totalHTML.innerHTML = "9"
+    console.log(a)
+});
+
+// Setting Event Listenters for the operators/main componenets
+let equalbutton = document.getElementById("equal").addEventListener("click", function(event){
+    totalHTML.innerHTML = total;
+});
+
+let multiplybutton = document.getElementById("multiply").addEventListener("click", function(event){
+
+});
+let plusbutton = document.getElementById("plus").addEventListener("click", function(event){
+    total =+ parseInt(a);
+    a= "0";
+});
+let subtractbutton = document.getElementById("subtract").addEventListener("click", function(event){
+
+});
+// If A/C is clicked, clear total, and also associate variables
+
+let clearbutton = document.getElementById("clear").addEventListener("click", function(event){
+    let total = 0;
+    let a = "0";
+    let b = "0";
+});
+
+//Setting Event Listenters for the complex components
+// This is gonna be the last part of the program
+// let decimalbutton = document.getElementById("decimal").addEventListener("click");
+// let percentage = document.getElementById("percentage").addEventListener("click");
+// let plusnegativebutton = document.getElementById("negative").addEventListener("click");
+
+
+
 
 // If equal Button is clicked, we want total to be printed
 if (equalbutton === true){
