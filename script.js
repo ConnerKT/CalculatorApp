@@ -18,12 +18,17 @@ let seven = "7";
 let eight = "8";
 let nine = "9";
 
-
 // Our containers for a number
 let a = "";
 let b = "";
-let container = 0;
+let c = "";
 let total = 0;
+let state = "False";
+
+function parsing(p1){
+   let parsed1 = parseInt(p1)
+    return parsed1;
+}
 
 
 // Setting Event Listeners to the buttons
@@ -35,85 +40,84 @@ let total = 0;
 
 
 let totalHTML = document.getElementById("total");
-totalHTML.innerHTML = "0"
+totalHTML.innerHTML = ""
 let zerobutton = document.getElementById("zero").addEventListener("click", function(){
-    if (a != ""){
+    if (state == "True"){
         b += zero;
-    }else{
+    }else if(state == "False"){
       a += zero;  
     }
     totalHTML.innerHTML += '0';
 });
 let onebutton = document.getElementById("one").addEventListener("click", function(){
-    if (a != ""){
+    if (state == "True"){
         b += one;
-    }else{
+    }else if(state == "False"){
       a += one;  
     }
     totalHTML.innerHTML += "1"
 });
 let twobutton = document.getElementById("two").addEventListener("click", function(){
-    if (a != ""){
+    if (state == "True"){
         b += two;
-    }else{
+    }else if(state == "False"){
       a += two;  
     }
     totalHTML.innerHTML += "2"
     console.log(a)
 });
 let threebutton = document.getElementById("three").addEventListener("click", function(){
-    if (a != ""){
+    if (state == "True"){
         b += three;
-    }else{
+    }else if(state == "False"){
       a += three;  
     }
     totalHTML.innerHTML += "3"
 });
 let fourbutton = document.getElementById("four").addEventListener("click", function(){
-    if (a != ""){
+    if (state == "True"){
         b += four;
-    }else{
+    }else if(state == "False"){
       a += four;  
     }
     totalHTML.innerHTML += "4"
 });
 let fivebutton = document.getElementById("five").addEventListener("click", function(){
-    if (a != ""){
+    if (state == "True"){
         b += five;
-    }else{
+    }else if(state == "False"){
       a += five;  
     }
     totalHTML.innerHTML += "5"
 });
 let sixbutton = document.getElementById("six").addEventListener("click", function(){
-    if (a != ""){
+    if (state == "True"){
         b += six;
-    }else{
+    }else if(state == "False"){
       a += six;  
     }
     totalHTML.innerHTML += "6"
 });
 let sevenbutton = document.getElementById("seven").addEventListener("click", function(){
-    if (a != ""){
-        b += seven
-    }else{
+    if (state == "True"){
+        b += seven;
+    }else if(state == "False"){
       a += seven;  
     }
-    
     totalHTML.innerHTML += "7"
 });
 let eightbutton = document.getElementById("eight").addEventListener("click", function(){
-    if (a != ""){
+    if (state == "True"){
         b += eight;
-    }else{
+    }else if(state == "False"){
       a += eight;  
     }
     totalHTML.innerHTML += "8"
 });
 let ninebutton = document.getElementById("nine").addEventListener("click", function(){
-    if (a != ""){
+    if (state == "True"){
         b += nine;
-    }else{
+    }else if(state == "False"){
       a += nine;  
     }
     totalHTML.innerHTML += "9"
@@ -121,42 +125,56 @@ let ninebutton = document.getElementById("nine").addEventListener("click", funct
 
 // Setting Event Listenters for the operators/main componenets
 let equalbutton = document.getElementById("equal").addEventListener("click", function(){
-    totalHTML.innerHTML = total;
-
-    if (plusbutton == true){
-        operation(a,b)
+    
+    if (c === "multiply"){
+        
+        total = parsing(a) * parsing(b)
+        console.log(c)
+    }else if (c === "plus"){
+        total = parsing(a) + parsing(b)
+    }else if (c === "subtract"){
+        total = parsing(a) - parsing(b)
+    }else if (c === "divide"){
+        total = parsing(a) / parsing(b)
     }
+    console.log(a)
+    console.log(b)
+    console.log(total)
+    totalHTML.innerHTML = total;
 });
 
 let multiplybutton = document.getElementById("multiply").addEventListener("click", function(){
-
     totalHTML.innerHTML = "0";
-
+    c = "multiply";
+    state = "True";
 });
 let plusbutton = document.getElementById("plus").addEventListener("click", function(){
     totalHTML.innerHTML = "0";
-    let parseVar = parseInt(a)
-    total += parseVar;
-   
-    a = 0;
-    parseVar = 0;
+    c = "plus";
+    state = "True";
   
 });
 let subtractbutton = document.getElementById("subtract").addEventListener("click", function(){
     totalHTML.innerHTML = "0";
+    c = "subtract";
+    state = "True";
 
 });
 let divisionbutton = document.getElementById("divide").addEventListener("click", function(){
     totalHTML.innerHTML = "0";
+    c = "divide";
+    state = "True";
 
 })
 // If A/C is clicked, clear total, and also associate variables
 
 let clearbutton = document.getElementById("clear").addEventListener("click", function(){
     total = 0;
-    a = "0";
-    b = "0";
+    a = "";
+    b = "";
+    c = "";
     totalHTML.innerHTML = "0"
+    state = "False"
 });
 
 //Setting Event Listenters for the complex components
@@ -164,14 +182,6 @@ let clearbutton = document.getElementById("clear").addEventListener("click", fun
 // let decimalbutton = document.getElementById("decimal").addEventListener("click");
 // let percentage = document.getElementById("percentage").addEventListener("click");
 // let plusnegativebutton = document.getElementById("negative").addEventListener("click");
-
-
-
-
-// If equal Button is clicked, we want total to be printed
-if (equalbutton === true){
-    total
-}
 
 
 

@@ -105,3 +105,16 @@ button:hover{
 button:active {
     background-color: #d6d6d6;
 }
+#credit {
+    text-align: center;
+    background-color: #bdbdbd;
+}
+#credit:hover {
+    color:blue;
+}
+body{
+    background-image:url(/CalculatorApp/resources/shutterstock_666030916-scaled.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+}
