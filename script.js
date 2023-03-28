@@ -20,10 +20,11 @@ let nine = "9";
 
 
 // Our containers for a number
-let a = 0;
-let b = 0;
+let a = "";
+let b = "";
 let container = 0;
 let total = 0;
+
 
 // Setting Event Listeners to the buttons
 // We are setting our a to a string because strings can be added
@@ -32,60 +33,103 @@ let total = 0;
 // we want it to add up in a variable (parseInt) so we can continue clicking numbers
 // Also for example if we're trying to do 23, using Ints wont work, so we use strings instead.
 
+
 let totalHTML = document.getElementById("total");
 totalHTML.innerHTML = "0"
 let zerobutton = document.getElementById("zero").addEventListener("click", function(){
-    a += zero;
+    if (a != ""){
+        b += zero;
+    }else{
+      a += zero;  
+    }
     totalHTML.innerHTML += '0';
 });
 let onebutton = document.getElementById("one").addEventListener("click", function(){
-    a += one;
+    if (a != ""){
+        b += one;
+    }else{
+      a += one;  
+    }
     totalHTML.innerHTML += "1"
 });
 let twobutton = document.getElementById("two").addEventListener("click", function(){
-    a += two;
+    if (a != ""){
+        b += two;
+    }else{
+      a += two;  
+    }
     totalHTML.innerHTML += "2"
     console.log(a)
 });
 let threebutton = document.getElementById("three").addEventListener("click", function(){
-    a += three;
+    if (a != ""){
+        b += three;
+    }else{
+      a += three;  
+    }
     totalHTML.innerHTML += "3"
 });
 let fourbutton = document.getElementById("four").addEventListener("click", function(){
-    a += four;
+    if (a != ""){
+        b += four;
+    }else{
+      a += four;  
+    }
     totalHTML.innerHTML += "4"
 });
 let fivebutton = document.getElementById("five").addEventListener("click", function(){
-    a += five;
+    if (a != ""){
+        b += five;
+    }else{
+      a += five;  
+    }
     totalHTML.innerHTML += "5"
 });
 let sixbutton = document.getElementById("six").addEventListener("click", function(){
-    a += six;
+    if (a != ""){
+        b += six;
+    }else{
+      a += six;  
+    }
     totalHTML.innerHTML += "6"
 });
 let sevenbutton = document.getElementById("seven").addEventListener("click", function(){
-    a += seven;
+    if (a != ""){
+        b += seven
+    }else{
+      a += seven;  
+    }
+    
     totalHTML.innerHTML += "7"
 });
 let eightbutton = document.getElementById("eight").addEventListener("click", function(){
-    a += eight;
+    if (a != ""){
+        b += eight;
+    }else{
+      a += eight;  
+    }
     totalHTML.innerHTML += "8"
 });
 let ninebutton = document.getElementById("nine").addEventListener("click", function(){
-    a += nine;
+    if (a != ""){
+        b += nine;
+    }else{
+      a += nine;  
+    }
     totalHTML.innerHTML += "9"
 });
 
 // Setting Event Listenters for the operators/main componenets
 let equalbutton = document.getElementById("equal").addEventListener("click", function(){
-    console.log("total", total)
-    
     totalHTML.innerHTML = total;
-    console.log(total)
-    parseVar = 0;
+
+    if (plusbutton == true){
+        operation(a,b)
+    }
 });
 
 let multiplybutton = document.getElementById("multiply").addEventListener("click", function(){
+
     totalHTML.innerHTML = "0";
 
 });
@@ -93,6 +137,7 @@ let plusbutton = document.getElementById("plus").addEventListener("click", funct
     totalHTML.innerHTML = "0";
     let parseVar = parseInt(a)
     total += parseVar;
+   
     a = 0;
     parseVar = 0;
   
