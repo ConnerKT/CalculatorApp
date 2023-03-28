@@ -35,52 +35,51 @@ let total = 0;
 let totalHTML = document.getElementById("total");
 totalHTML.innerHTML = "0"
 let zerobutton = document.getElementById("zero").addEventListener("click", function(){
-    a = zero;
+    a += zero;
     totalHTML.innerHTML += '0';
 });
 let onebutton = document.getElementById("one").addEventListener("click", function(){
-    a = one;
+    a += one;
     totalHTML.innerHTML += "1"
 });
 let twobutton = document.getElementById("two").addEventListener("click", function(){
-    a = two;
+    a += two;
     totalHTML.innerHTML += "2"
     console.log(a)
 });
 let threebutton = document.getElementById("three").addEventListener("click", function(){
-    a = three;
+    a += three;
     totalHTML.innerHTML += "3"
 });
 let fourbutton = document.getElementById("four").addEventListener("click", function(){
-    a = four;
+    a += four;
     totalHTML.innerHTML += "4"
 });
 let fivebutton = document.getElementById("five").addEventListener("click", function(){
-    a = five;
+    a += five;
     totalHTML.innerHTML += "5"
 });
 let sixbutton = document.getElementById("six").addEventListener("click", function(){
-    a = six;
+    a += six;
     totalHTML.innerHTML += "6"
 });
 let sevenbutton = document.getElementById("seven").addEventListener("click", function(){
-    a = seven;
+    a += seven;
     totalHTML.innerHTML += "7"
 });
 let eightbutton = document.getElementById("eight").addEventListener("click", function(){
-    a = eight;
+    a += eight;
     totalHTML.innerHTML += "8"
 });
 let ninebutton = document.getElementById("nine").addEventListener("click", function(){
-    a = nine;
+    a += nine;
     totalHTML.innerHTML += "9"
 });
 
 // Setting Event Listenters for the operators/main componenets
 let equalbutton = document.getElementById("equal").addEventListener("click", function(){
     console.log("total", total)
-    // let parseVar = parseInt(a)
-    // total += parseVar;
+    
     totalHTML.innerHTML = total;
     console.log(total)
     parseVar = 0;
